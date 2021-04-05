@@ -4,11 +4,11 @@ import src.limpieza_texto as lt
 pd.options.mode.chained_assignment = None  # default='warn'
 
 df = pd.read_csv("./data/attacks.csv",encoding = "ISO-8859-1")
-columna='Country'
-(filas,col)=df.shape
+#columna='Country'
+#(filas,col)=df.shape
 df=lt.limpia_nan(df,3)
-csv='./data/continent.csv'
-dicc=lt.continentes(csv)
+#csv='./data/continent.csv'
+#dicc=lt.continentes(csv)
 
 
 df['Activity'] = df['Activity'].fillna('UNK')

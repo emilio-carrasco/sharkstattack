@@ -31,7 +31,7 @@ f3_ax3.scatter( df.Attacks, df['10yvariation'], c="green")
 
 correlacion=df[['10yvariation','Attacks']].corr()
 corre=correlacion.Attacks['10yvariation']
-
+print(round(corre,2))
 f3_ax3.annotate(f"Correlación = {corre}", xy=(2, 1), xytext=(3, 4),
             arrowprops=dict(facecolor='black', shrink=0.05))
 
@@ -40,9 +40,6 @@ p = np.poly1d(z)
 plt.plot(df.Attacks,p(df.Attacks),"r. ", alpha=0.5)
 
 plt.show()
-
-
-
 
 
 fig3.savefig('./fig/attacks-temp.png')
